@@ -37,7 +37,7 @@
                 <&macro_press>,
                 <&kp RIGHT_ALT &kp COMMA>,
                 <&macro_release>,
-                <&kp RALT &kp COMMA>;
+                <&kp RIGHT_ALT &kp COMMA>;
 
             label = "MACRO_CEDILLA";
         };
