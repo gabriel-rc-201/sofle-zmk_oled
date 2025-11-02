@@ -34,7 +34,7 @@
         macro_cedilla: macro_cedilla {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(U)) &kp U00E7>;
+            bindings = <&unicode U00E7>;
 
             label = "MACRO_CEDILLA";
         };
