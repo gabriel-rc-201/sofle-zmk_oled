@@ -55,7 +55,7 @@
         };
 
         math_layer {
-            display-name = "lower";
+            display-name = "math";
 
             // TODO: Some binds are waiting for shifted keycode support.
             // ------------------------------------------------------------------------------------------------------------
@@ -77,7 +77,7 @@
         };
 
         move_layer {
-            display-name = "raise";
+            display-name = "move";
 
             // ------------------------------------------------------------------------------------------------------------
             // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
