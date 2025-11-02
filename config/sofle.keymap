@@ -28,6 +28,15 @@
         };
     };
 
+    macros {
+        macro_cedilla: macro_cedilla {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <>;
+            label = "MACRO_CEDILLA";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
