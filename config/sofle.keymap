@@ -37,9 +37,9 @@
     };
 
     behaviors {
-        hold_layer1: hold_layer1 {
+        hold_to_layer: hold_to_layer {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_LAYER1";
+            label = "HOLD_TO_LAYER";
             bindings = <&mo>;
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -49,7 +49,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "DANCE_LAYERS";
             #binding-cells = <0>;
-            bindings = <&hold_layer1 1>, <&hold_layer1 3>;
+            bindings = <&hold_to_layer 1>, <&hold_to_layer 3>;
         };
     };
 
