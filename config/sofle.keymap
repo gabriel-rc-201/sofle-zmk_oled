@@ -182,8 +182,8 @@
             //                |      |       |       |      |      |  |      |      |      |       |      |
 
             bindings = <
-&trans  &trans           &trans       &kp F2         &kp F5       &kp F12                         &trans          &trans          &trans        &trans         &trans     &trans
-&trans  &kp INS          &kp PSCRN    &trans         &trans       &cut_macro                      &kp BACKSPACE   &kp DEL         &kp SLASH     &kp BACKSLASH  &kp TILDE  &trans
+&trans  &trans           &trans       &kp F2         &kp F12      &kp F5                          &trans          &trans          &trans        &trans         &trans     &trans
+&trans  &kp INS          &kp PSCRN    &kp ASTERISK   &trans       &cut_macro                      &kp BACKSPACE   &kp DEL         &kp SLASH     &kp BACKSLASH  &kp TILDE  &trans
 &trans  &kp EXCLAMATION  &kp AT_SIGN  &kp AMPERSAND  &kp PERCENT  &paste_macro                    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT      &kp SEMI   &kp QUESTION
 &trans  &undo_macro      &redo_macro  &kp DOLLAR     &kp HASH     &copy_macro   &trans    &trans  &kp GRAVE       &kp UNDER       &kp MINUS     &kp EQUAL      &kp PIPE   &trans
                          &trans       &trans         &trans       &trans        &trans    &trans  &trans          &trans          &kp RALT      &kp HOME
