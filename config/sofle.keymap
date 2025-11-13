@@ -97,26 +97,19 @@
     };
 
     behaviors {
-        hold_to_layer: hold_to_layer {
+        change_layers: change_layers {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_TO_LAYER";
-            bindings = <&mo>, <&none>;
+            label = "CHANGE_LAYERS";
+            bindings = <&mo>, <&to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
 
-        dacing_layers: dacing_layers {
-            compatible = "zmk,behavior-tap-dance";
-            label = "DACING_LAYERS";
-            #binding-cells = <0>;
-            bindings = <&hold_to_layer 1 0>, <&hold_to_layer 3 0>;
-        };
-
-        change_layers: change_layers {
+        ht_keys: ht_keys {
             compatible = "zmk,behavior-hold-tap";
-            label = "CHANGE_LAYERS";
-            bindings = <&mo>, <&to>;
+            label = "HT_KEYS";
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -137,11 +130,11 @@
             //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
 
             bindings = <
-&kp GRAVE   &kp N1     &kp N2    &kp N3  &kp N4        &kp N5                                  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0          &kp DELETE
-&kp TAB     &kp Q      &kp W     &kp E   &kp R         &kp T                                   &kp Y      &kp U      &kp I      &kp O     &kp P           &kp CARET
-&kp ESCAPE  &kp A      &kp S     &kp D   &kp F         &kp G                                   &kp H      &kp J      &kp K      &kp L     &macro_cedilla  &kp SQT
-&kp LSHFT   &kp LCTRL  &kp X     &kp C   &kp V         &kp B      &kp C_MUTE            &none  &kp N      &kp M      &kp COMMA  &kp DOT   &kp END         &kp RSHFT
-                       &kp LGUI  &kp Z   &kp LEFT_ALT  &kp SPACE  &change_layers 2 1    &to 3  &kp ENTER  &kp RCTRL  &kp RALT   &kp HOME
+&kp GRAVE   &kp N1            &kp N2    &kp N3  &kp N4        &kp N5                                  &kp N6     &kp N7     &kp N8     &kp N9    &kp N0          &kp DELETE
+&kp TAB     &kp Q             &kp W     &kp E   &kp R         &kp T                                   &kp Y      &kp U      &kp I      &kp O     &kp P           &kp CARET
+&kp ESCAPE  &kp A             &kp S     &kp D   &kp F         &kp G                                   &kp H      &kp J      &kp K      &kp L     &macro_cedilla  &kp SQT
+&kp LSHFT   &ht_keys LCTRL Z  &kp X     &kp C   &kp V         &kp B      &kp C_MUTE            &none  &kp N      &kp M      &kp COMMA  &kp DOT   &kp END         &kp RSHFT
+                              &kp LGUI  &kp Z   &kp LEFT_ALT  &kp SPACE  &change_layers 2 1    &to 3  &kp ENTER  &kp RCTRL  &kp RALT   &kp HOME
             >;
 
             sensor-bindings =
