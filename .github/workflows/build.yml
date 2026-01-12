@@ -18,7 +18,10 @@ jobs:
 
       - name: Init ZMK workspace
         run: |
-          west init -m https://github.com/zmkfirmware/zmk.git --manifest-rev main zmk
+          west init -m https://github.com/zmkfirmware/zmk.git \
+            --manifest-rev main \
+            --manifest-file app/west.yml \
+            zmk
           cd zmk
           west update
 
