@@ -1,8 +1,41 @@
-on: [push, pull_request, workflow_dispatch]
+name: ZMK Build
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
-    with:
-      board: nice_nano_v2
-      shield: sofle_left sofle_right
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout user config
+        uses: actions/checkout@v4
+
+      - name: Install west
+        run: pip3 install --user west
+
+      - name: Init ZMK workspace
+        run: |
+          west init -m https://github.com/zmkfirmware/zmk.git zmk
+          cd zmk
+          west update
+
+      - name: Build Sofle left
+        run: |
+          cd zmk
+          west build -s app -b nice_nano_v2 -- \
+            -DSHIELD=sofle_left \
+            -DZMK_CONFIG=${{ github.workspace }}/config \
+            -DZMK_EXTRA_MODULES=${{ github.workspace }}/sofle-zmk_oled \
+            -DCONFIG_ZMK_STUDIO=y
+
+      - name: Build Sofle right
+        run: |
+          cd zmk
+          west build -s app -b nice_nano_v2 -d build-right -- \
+            -DSHIELD=sofle_right \
+            -DZMK_CONFIG=${{ github.workspace }}/config \
+            -DZMK_EXTRA_MODULES=${{ github.workspace }}/sofle-zmk_oled \
+            -DCONFIG_ZMK_STUDIO=y
