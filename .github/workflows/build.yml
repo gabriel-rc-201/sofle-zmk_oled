@@ -27,8 +27,7 @@ jobs:
 
       - name: Build Sofle left
         run: |
-          cd zmk
-          west build -s app -b nice_nano_v2 -- \
+          west build -s zmk/app -b nice_nano_v2 -- \
             -DSHIELD=sofle_left \
             -DZMK_CONFIG=${{ github.workspace }}/config \
             -DZMK_EXTRA_MODULES=${{ github.workspace }}/sofle-zmk_oled \
@@ -36,8 +35,7 @@ jobs:
 
       - name: Build Sofle right
         run: |
-          cd zmk
-          west build -s app -b nice_nano_v2 -d build-right -- \
+          west build -s zmk/app -b nice_nano_v2 -d build-right -- \
             -DSHIELD=sofle_right \
             -DZMK_CONFIG=${{ github.workspace }}/config \
             -DZMK_EXTRA_MODULES=${{ github.workspace }}/sofle-zmk_oled \
