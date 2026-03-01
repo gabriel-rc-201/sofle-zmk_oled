@@ -202,7 +202,7 @@
         };
 
         brackets_layer {
-            display-name = "brackets"
+            display-name = "brackets";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans           &trans             &trans                 &trans         &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp PIPE       &trans
