@@ -212,11 +212,11 @@
         brackets_layer {
             display-name = "brackets";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans           &trans             &trans                 &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp BACKSPACE  &kp LEFT_BRACE   &kp LEFT_BRACKET   &kp LEFT_PARENTHESIS   &kp PIPE       &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &kp RIGHT_BRACE  &kp RIGHT_BRACKET  &kp RIGHT_PARENTHESIS  &kp SEMICOLON  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans           &trans             &trans                 &trans         &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans           &trans             &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &trans            &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &kp BACKSPACE  &kp LEFT_BRACE    &kp RIGHT_BRACE       &trans                 &kp PIPE       &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans         &kp LEFT_BRACKET  &kp RIGHT_BRACKET     &trans                 &kp SEMICOLON  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans            &trans                &trans                 &trans         &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans         &trans            &trans                &trans
             >;
         };
     };
